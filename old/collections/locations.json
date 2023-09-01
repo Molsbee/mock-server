@@ -1,0 +1,422 @@
+[
+  {
+    "path": "/locations",
+    "method": "GET",
+    "body": [
+      {
+        "id": "ALBQNMMALEC",
+        "name": "Albuquerque, NM",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "ALBYNYVPLEC",
+        "name": "Albany, NY",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "AMRMTXAMLEC",
+        "name": "Amarillo, TX",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "AMSTNLAQLEC",
+        "name": "Amsterdam, NL",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "ATLDGAUYLEC",
+        "name": "Atlanta, GA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "AUSTTXUHLEC",
+        "name": "Austin, TX",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "BLNGMTMALEC",
+        "name": "Billings, MT",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "BOISIDMALEC",
+        "name": "Boise, ID",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "BRVWILCULEC",
+        "name": "Broadview, IL",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "CDRRIADTLEC",
+        "name": "Cedar Rapids, IA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "CHRLNCRLLEC",
+        "name": "Charlotte, NC",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "CLEVOH97LEC",
+        "name": "Cleveland, OH",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "CMBRMAORLEC",
+        "name": "Cambridge, MA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "CNCNOHBVLEC",
+        "name": "Cincinnati, OH",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "CPNHDKBMLEC",
+        "name": "Copenhagen, DK",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "CSPRWYMALEC",
+        "name": "Casper, WY",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "DLLATX37LEC",
+        "name": "Dallas, TX",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "DNVT0856LEC",
+        "name": "Edge Experience Center",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "DNVTCO56LEC",
+        "name": "Denver, CO",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "DSDFGEAKLEC",
+        "name": "Dusseldorf, Germany",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "DTRTMITKLEC",
+        "name": "Detroit, MI",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "ELPUTXAYLEC",
+        "name": "El Paso,TX",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "FRNKGEATLEC",
+        "name": "Frankfurt, Germany",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "FRSMCA15LEC",
+        "name": "Fresno, CA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "HMBGGEAKLEC",
+        "name": "Hamburg, Germany",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "HRNDVAIZLEC",
+        "name": "Herndon, VA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "HSTQTX02LEC",
+        "name": "Houston,TX",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "IPLWINROLEC",
+        "name": "Indianapolis, IN",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "JCSNMS91LEC",
+        "name": "Jackson, MS",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "JCVLFLAILEC",
+        "name": "Jacksonville, FL",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "KSCBMOVSLEC",
+        "name": "Kansas City, MO",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "LCHNPQEQLEC",
+        "name": "Lachine, QC",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "LONDENEHLEC",
+        "name": "London, England",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "LTRKARDRLEC",
+        "name": "Little Rock, AR",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "MCAMTXKNLEC",
+        "name": "McAllan, TX",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "MDSNWIUQLEC",
+        "name": "Madison, WI",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "MIATFLADLEC",
+        "name": "Miami, FL",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "MILNITDGLEC",
+        "name": "Milan, Italy",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "MLUAHIAKLEC",
+        "name": "Honolulu, HI",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "MNCHGEAOLEC",
+        "name": "Munich, DE",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "MNNTMNICLEC",
+        "name": "Minnetonka, MN",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "MTRELANJLEC",
+        "name": "Metairie, LA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "NLVGNVBVLEC",
+        "name": "Las Vegas, NV",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "NSVMTN17LEC",
+        "name": "Nashville, TN",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "NYCPNYYKLEC",
+        "name": "New York, NY",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "OMALNEUNLEC",
+        "name": "Omaha, NE",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "OSLONWANLEC",
+        "name": "Oslo, NO",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "PARSFRAWLEC",
+        "name": "Paris, France",
+        "status": "ACTIVE",
+        "region": "EMEA"
+      },
+      {
+        "id": "PHLAPAFGLEC",
+        "name": "Philadelphia, PA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "PHNDAZ91LEC",
+        "name": "Phoenix, AZ",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "PITEPADTLEC",
+        "name": "Pittsburgh, PA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "PTLGORIALEC",
+        "name": "Portland, OR",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "RENPNVARLEC",
+        "name": "Reno, NV",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "RLGHNCJVLEC",
+        "name": "Raliegh, NC",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "SLKDUTTXLEC",
+        "name": "Salt Lake City, UT",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "SNAQTXKYLEC",
+        "name": "San Antonio, TX",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "SNDACAGLLEC",
+        "name": "San Diego, CA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "SNGPSIKPLEC",
+        "name": "Singapore",
+        "status": "ACTIVE",
+        "region": "APAC"
+      },
+      {
+        "id": "SNTDCADZLEC",
+        "name": "Santa Clara, CA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "SPKNWA01LEC",
+        "name": "Spokane, WA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "STLSMOPLLEC",
+        "name": "St. Louis,MO",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "STTNWAHOLEC",
+        "name": "Seattle, WA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "TAMRFLWSLEC",
+        "name": "Tampa, FL",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "TOKZJPQOLEC",
+        "name": "Tokyo, Japan",
+        "status": "ACTIVE",
+        "region": "APAC"
+      },
+      {
+        "id": "TORVONRFLEC",
+        "name": "Toronto,CA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "TULUOKBRLEC",
+        "name": "Tulsa, OK",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "TUSTCAFTLEC",
+        "name": "Tustin, CA",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "VANCBCHCLEC",
+        "name": "Vancouver, BC",
+        "status": "ACTIVE",
+        "region": "NA"
+      },
+      {
+        "id": "WSCRCAHWLEC",
+        "name": "West Sacramento, CA",
+        "status": "ACTIVE",
+        "region": "NA"
+      }
+    ]
+  }
+]

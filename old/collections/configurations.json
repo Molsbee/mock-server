@@ -1,0 +1,63 @@
+[
+  {
+    "path": "/locations/:id/configurations",
+    "method": "GET",
+    "body": [
+      {
+        "name": "large",
+        "cores": 32,
+        "memory": "768 GB",
+        "storage": "31 TB",
+        "disks": null,
+        "nics": 4,
+        "processors": 2,
+        "vendor": null,
+        "machineCount": 6
+      },
+      {
+        "name": "medium",
+        "cores": 32,
+        "memory": "384 GB",
+        "storage": "7 TB",
+        "disks": null,
+        "nics": 4,
+        "processors": 2,
+        "vendor": null,
+        "machineCount": 4
+      },
+      {
+        "name": "small",
+        "cores": 20,
+        "memory": "96 GB",
+        "storage": "480 GB",
+        "disks": null,
+        "nics": 2,
+        "processors": 1,
+        "vendor": null,
+        "machineCount": 10
+      },
+      {
+        "name": "small_plus",
+        "cores": 32,
+        "memory": "32 GB",
+        "storage": "241 GB",
+        "disks": null,
+        "nics": 2,
+        "processors": 2,
+        "vendor": null,
+        "machineCount": 62
+      },
+      {
+        "name": "sm_medium",
+        "cores": 32,
+        "memory": "384 GB",
+        "storage": "2 TB",
+        "disks": null,
+        "nics": 2,
+        "processors": 2,
+        "vendor": null,
+        "machineCount": 27
+      }
+    ]
+  }
+]

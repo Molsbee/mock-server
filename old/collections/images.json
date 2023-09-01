@@ -1,0 +1,36 @@
+[
+  {
+    "path": "/osImages",
+    "method": "GET",
+    "body": [
+      {
+        "name": "Ubuntu 20.04",
+        "ready": true
+      },
+      {
+        "name": "Ubuntu 22.04",
+        "ready": true
+      },
+      {
+        "name": "RockyLinux 8.6",
+        "ready": true
+      },
+      {
+        "name": "CentOS 7.9",
+        "ready": true
+      },
+      {
+        "name": "CentOS 8.2",
+        "ready": true
+      },
+      {
+        "name": "RHEL 7.9",
+        "ready": false
+      },
+      {
+        "name": "RHEL 8.5",
+        "ready": false
+      }
+    ]
+  }
+]

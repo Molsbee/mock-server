@@ -1,0 +1,585 @@
+[
+  {
+    "path":  "/servers/:id",
+    "method":  "GET",
+    "body": {
+      "id": "6499c7fe9d8f3fc0fc806237",
+      "name": "ChrisTest_BM_Ubuntu22_04_Philadelphia",
+      "machineId": "PHLAPAFGLEC-dsgdbh",
+      "machineName": "PHLAPAFGSB020308",
+      "location": "PHLAPAFGLEC",
+      "configuration": {
+        "name": "small",
+        "cores": 20,
+        "memory": "96 GB",
+        "storage": "480 GB",
+        "nics": 2,
+        "processors": 1
+      },
+      "osImage": "Ubuntu 22.04",
+      "networks": [
+        {
+          "id": null,
+          "status": null,
+          "statusMessage": null,
+          "ip": "216.202.191.172",
+          "vpcId": null,
+          "vlan": null
+        }
+      ],
+      "status": "provisioned",
+      "statusMessage": "The server has been successfully provisioned",
+      "powerStatus": "on",
+      "disks": [
+        {
+          "model": "SAMSUNG MZQLB960HAJR-00007",
+          "size": "960.20 GB",
+          "name": "nvme0n1"
+        },
+        {
+          "model": "Micron_7300_MTFDHBA480TDF",
+          "size": "480.10 GB",
+          "name": "nvme2n1"
+        },
+        {
+          "model": "SAMSUNG MZQLB960HAJR-00007",
+          "size": "960.20 GB",
+          "name": "nvme1n1"
+        }
+      ],
+      "bootDisk": "nvme2n1",
+      "serviceId": "PA/IRXX/022780/LUMN",
+      "price": "748.8",
+      "accountId": "5-XHJGPDY4",
+      "created": "2023-06-21T19:52:36.000+00:00",
+      "updated": "2023-06-21T19:52:36.000+00:00"
+    }
+  },
+  {
+    "path":  "/servers",
+    "method": "GET",
+    "body": [
+      {
+        "id": "6499c7f69d8f3fc0fc806230",
+        "name": "My ML4ECTSTBM010303",
+        "machineId": "LTTNCOMLS00-qdsfd8",
+        "machineName": "ML4ECTSTBM010303",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "large",
+        "osImage": "rhel",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.255.123",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "LVM PV GFK623-XdYH-Q7T6-Le2I-Jled-tQyS-WPxN5h on /dev/nvme0n1",
+            "size": "1.6TB",
+            "name": "nvme0n1"
+          }
+        ],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-01-03T12:41:55.000+00:00",
+        "updated": "2023-01-06T14:41:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806231",
+        "name": "My ML4ECTSTBM020203",
+        "machineId": "LTTNCOMLS00-7qb3bt",
+        "machineName": "ML4ECTSTBM020203",
+        "location": "Test1, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "large",
+        "osImage": "centos",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.15.99",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "Dell Express Flash NVMe P4610 1.6TB SFF",
+            "size": "1.6TB",
+            "name": "nvme0n1"
+          },
+          {
+            "model": "Dell Express Flash NVMe P4610 1.6TB SFF",
+            "size": "1.6TB",
+            "name": "nvme1n1"
+          }
+        ],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-03-06T21:30:55.000+00:00",
+        "updated": "2023-03-08T19:30:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806232",
+        "name": "My ML4ECTSTBM020301",
+        "machineId": "LTTNCOMLS00-snq6ak",
+        "machineName": "ML4ECTSTBM020301",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "medium",
+        "osImage": "centos",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.15.84",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "KPM5XRUG1T92",
+            "size": "1.92TB",
+            "name": "sdb"
+          }
+        ],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-02-13T15:52:55.000+00:00",
+        "updated": "2023-02-16T08:52:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806233",
+        "name": "My ML4ECTSTBM020302",
+        "machineId": "LTTNCOMLS00-6gdbxd",
+        "machineName": "ML4ECTSTBM020302",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "medium",
+        "osImage": "",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.255.123",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-03-28T16:39:55.000+00:00",
+        "updated": "2023-03-29T12:39:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806234",
+        "name": "My ML4ECTSTBM020202",
+        "machineId": "LTTNCOMLS00-qgk74n",
+        "machineName": "ML4ECTSTBM020202",
+        "location": "Test2, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "large",
+        "osImage": "centos",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.16.84",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "Dell Express Flash NVMe P4610 1.6TB SFF",
+            "size": "1.6TB",
+            "name": "nvme0n1"
+          }
+        ],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-04-10T01:47:55.000+00:00",
+        "updated": "2023-04-13T20:47:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806235",
+        "name": "My ML4ECTSTBM020304",
+        "machineId": "LTTNCOMLS00-gxs86g",
+        "machineName": "ML4ECTSTBM020304",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "medium",
+        "osImage": "",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.255.123",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-03-05T22:08:55.000+00:00",
+        "updated": "2023-03-07T17:08:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806236",
+        "name": "My ML4ECTSTBM020303",
+        "machineId": "LTTNCOMLS00-wtxqp8",
+        "machineName": "ML4ECTSTBM020303",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "medium",
+        "osImage": "",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.255.123",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "KPM5XRUG1T92",
+            "size": "1.92TB",
+            "name": "sda"
+          }
+        ],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-01-11T05:40:55.000+00:00",
+        "updated": "2023-01-14T01:40:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806237",
+        "name": "My ML4ECTSTBM010201",
+        "machineId": "LTTNCOMLS00-ynmyy7",
+        "machineName": "ML4ECTSTBM010201",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "large",
+        "osImage": "",
+        "ipAddress": "10.192.16.67",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.16.67",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "Dell Express Flash NVMe P4610 1.6TB SFF",
+            "size": "1.6TB",
+            "name": "nvme0n1"
+          }
+        ],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-01-14T04:40:55.000+00:00",
+        "updated": "2023-01-17T01:40:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806237",
+        "name": "My ML4ECTSTBM010504",
+        "machineId": "LTTNCOMLS00-stekxy",
+        "machineName": "ML4ECTSTBM010504",
+        "location": "Test2, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "medium",
+        "osImage": "windows",
+        "ipAddress": "10.192.15.60",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.15.60",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "DELLBOSS VD",
+            "size": "239.99GB",
+            "name": "sdb"
+          }
+        ],
+        "bootDisk": "sdb",
+        "serviceId": "edg123",
+        "created": "2023-02-23T22:04:55.000+00:00",
+        "updated": "2023-02-26T07:04:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806238",
+        "name": "My ML4ECTSTBM030501",
+        "machineId": "LTTNCOMLS00-fhrda8",
+        "machineName": "ML4ECTSTBM030501",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "medium",
+        "osImage": "centos",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.15.79",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "MZILT1T9HBJR0D3",
+            "size": "1.92TB",
+            "name": "sda"
+          }
+        ],
+        "bootDisk": "sda",
+        "serviceId": "edg123",
+        "created": "2023-03-23T13:41:55.000+00:00",
+        "updated": "2023-03-24T23:41:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806239",
+        "name": "My ML4ECTSTBM010402",
+        "machineId": "LTTNCOMLS00-y6c88q",
+        "machineName": "ML4ECTSTBM010402",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "medium",
+        "osImage": "windows",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.255.52",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "DELLBOSS VD",
+            "size": "239.99GB",
+            "name": "sde"
+          }
+        ],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-01-04T01:53:55.000+00:00",
+        "updated": "2023-01-07T17:53:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806240",
+        "name": "My ML4ECTSTBM010304",
+        "machineId": "LTTNCOMLS00-sr7433",
+        "machineName": "ML4ECTSTBM010304",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "large",
+        "osImages": "rhel",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.15.81",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "LVM PV DInUMz-6dCc-dz93-x2cI-JLnJ-ZlgR-nj2O8h on /dev/nvme1n1",
+            "size": "1.6TB",
+            "name": "nvme1n1"
+          }
+        ],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-03-09T12:43:55.000+00:00",
+        "updated": "2023-03-10T03:43:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806241",
+        "name": "My ML4ECTSTBM010103",
+        "machineId": "LTTNCOMLS00-nqtkgt",
+        "machineName": "ML4ECTSTBM010103",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "large",
+        "osImage": "rhel",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.255.122",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [
+          {
+            "model": "Dell Express Flash NVMe P4610 1.6TB SFF",
+            "size": "1.6TB",
+            "name": "nvme0n1"
+          }
+        ],
+        "bootDisk": "nvme0n1",
+        "serviceId": "edg123",
+        "created": "2023-03-10T09:53:55.000+00:00",
+        "updated": "2023-03-13T19:53:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806242",
+        "name": "My ML4ECTSTBM020104",
+        "machineId": "LTTNCOMLS00-6exnyg",
+        "machineName": "ML4ECTSTBM020104",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "large",
+        "osImage": "",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.255.123",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "available",
+        "disks": [],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-03-12T08:32:55.000+00:00",
+        "updated": "2023-03-15T17:32:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806242",
+        "name": "My ML4ECTSTBM010603",
+        "machineId": "LTTNCOMLS00-83rrh4",
+        "machineName": "ML4ECTSTBM010603",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "large",
+        "osImage": "ubuntu",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.255.112",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-01-10T15:08:55.000+00:00",
+        "updated": "2023-01-11T18:08:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      },
+      {
+        "id":"6499c7f69d8f3fc0fc806243",
+        "name": "My ML4ECDEVBM040102",
+        "machineId": "LTTNCOMLS00-8rg8ww",
+        "machineName": "ML4ECDEVBM040102",
+        "location": "Test, Site",
+        "locationId": "LTTNCOMLS00",
+        "configuration": "large",
+        "osImage": "ubuntu",
+        "networks": [
+          {
+            "id": null,
+            "status": null,
+            "statusMessage": null,
+            "ip": "10.192.17.58",
+            "vpcId": null,
+            "vlan": null
+          }
+        ],
+        "status": "provisioned",
+        "disks": [],
+        "bootDisk": "sde",
+        "serviceId": "edg123",
+        "created": "2023-04-08T22:32:55.000+00:00",
+        "updated": "2023-04-10T11:32:55.000+00:00",
+        "price": "$0.00",
+        "accountId": "5-XHJGPDY4"
+      }
+    ]
+  }
+]

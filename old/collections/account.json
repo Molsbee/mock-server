@@ -1,0 +1,13 @@
+[
+  {
+    "path": "/accounts",
+    "method": "GET",
+    "body": [
+      {
+        "name": "Test Account",
+        "accountNumber": "5-XHJGPDY4",
+        "customerNumber": "5-XHJGPDY4"
+      }
+    ]
+  }
+]
