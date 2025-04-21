@@ -1,11 +1,12 @@
 package main
 
 import (
+	"net/http"
+
 	"github.com/Molsbee/mock-server/model"
 	"github.com/Molsbee/mock-server/service"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 var corsHandler = cors.New(cors.Config{
@@ -24,39 +25,70 @@ func main() {
 		c.JSON(200, collections)
 	})
 	adminRouter.POST("/collections", func(c *gin.Context) {
-		// Create Collection
 		var collection model.Collection
 		if err := c.BindJSON(&collection); err != nil {
 			c.Status(http.StatusBadRequest)
 			return
 		}
 
-		if err := service.CreateCollection(collection.Name); err != nil {
-			c.Status(http.StatusInternalServerError)
+		if err := service.CreateCollection(collection); err != nil {
+			c.JSON(http.StatusInternalServerError, APIErrorResponse{Error: err.Error()})
 			return
 		}
 		c.Status(http.StatusCreated)
 	})
 	adminRouter.DELETE("/collections/:collectionName", func(c *gin.Context) {
 		collectionName := c.Param("collectionName")
-		if len(collectionName) != 0 {
-			if err := service.DeleteCollection(collectionName); err != nil {
-				c.Status(http.StatusOK)
-				return
-			}
+		if len(collectionName) == 0 {
+			c.JSON(http.StatusBadRequest, APIErrorResponse{Error: "Please provide a collection name"})
+			return
 		}
-		// Delete Collection
+
+		if err := service.DeleteCollection(collectionName); err != nil {
+			c.JSON(http.StatusInternalServerError, APIErrorResponse{Error: err.Error()})
+			return
+		}
+		c.Status(http.StatusAccepted)
+		return
 	})
 	adminRouter.GET("/collections/:collectionName", func(c *gin.Context) {
-		// Get Collection Details
-	})
-	adminRouter.POST("/collections/:collectionName", func(c *gin.Context) {
-		// Overwrite collection details
+		collectionName := c.Param("collectionName")
+		if len(collectionName) == 0 {
+			c.JSON(http.StatusBadRequest, APIErrorResponse{Error: "Please provide a collection name"})
+			return
+		}
+
+		collection, err := service.GetCollection(collectionName)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, APIErrorResponse{Error: err.Error()})
+			return
+		}
+
+		c.JSON(http.StatusOK, collection)
+		return
 	})
 	adminRouter.PUT("/collections/:collectionName", func(c *gin.Context) {
-		// Add item to collection details
-	})
+		collectionName := c.Param("collectionName")
+		if len(collectionName) == 0 {
+			c.JSON(http.StatusBadRequest, APIErrorResponse{Error: "Please provide a collection name"})
+			return
+		}
 
+		var collection model.Collection
+		if err := c.BindJSON(&collection); err != nil {
+			c.Status(http.StatusBadRequest)
+			return
+		}
+
+		update, err := service.UpdateCollection(collectionName, collection)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, APIErrorResponse{Error: err.Error()})
+			return
+		}
+
+		c.JSON(http.StatusOK, update)
+		return
+	})
 	adminRouter.Run(":8081")
 
 	//router := gin.Default()
@@ -82,8 +114,6 @@ func main() {
 	//router.Run(":8085")
 }
 
-type Route struct {
-	Path   string
-	Method string
-	Body   interface{}
+type APIErrorResponse struct {
+	Error string `json:"error"`
 }
