@@ -1,8 +1,10 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"net/http"
+	"time"
 
 	"github.com/Molsbee/mock-server/model"
 	"github.com/Molsbee/mock-server/service"
@@ -18,12 +20,13 @@ var corsHandler = cors.New(cors.Config{
 	AllowCredentials: true,
 })
 
-func setupMockServer() {
+func setupMockServer() *http.Server {
+	router := gin.Default()
+	router.Use(corsHandler)
+
 	collections := service.GetCollections()
 	if len(collections) != 0 {
-		router := gin.Default()
-		router.Use(corsHandler)
-		// Setup Mock Server
+		// Setup handlers for Mock Server
 		for _, collection := range collections {
 			for _, route := range collection.Routes {
 				go func(router *gin.Engine, collectionName string, route model.Route) {
@@ -33,12 +36,20 @@ func setupMockServer() {
 				}(router, collection.Name, route)
 			}
 		}
-		go router.Run(":8085")
 	}
+
+	// Using server to support shutting it down programatically
+	srv := &http.Server{
+		Addr:    ":8085",
+		Handler: router,
+	}
+	go srv.ListenAndServe()
+
+	return srv
 }
 
 func main() {
-	setupMockServer()
+	mockServer := setupMockServer()
 
 	adminRouter := gin.Default()
 	adminRouter.Use(corsHandler)
@@ -110,6 +121,15 @@ func main() {
 
 		c.JSON(http.StatusOK, update)
 		return
+	})
+	adminRouter.POST("/server/restart", func(c *gin.Context) {
+		ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
+		defer cancel()
+
+		err := mockServer.Shutdown(ctx)
+		if err == nil {
+			mockServer = setupMockServer()
+		}
 	})
 	adminRouter.Run(":8081")
 }
