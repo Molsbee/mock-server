@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/Molsbee/mock-server/model"
@@ -17,11 +18,32 @@ var corsHandler = cors.New(cors.Config{
 	AllowCredentials: true,
 })
 
+func setupMockServer() {
+	collections := service.GetCollections()
+	if len(collections) != 0 {
+		router := gin.Default()
+		router.Use(corsHandler)
+		// Setup Mock Server
+		for _, collection := range collections {
+			for _, route := range collection.Routes {
+				go func(router *gin.Engine, collectionName string, route model.Route) {
+					router.Handle(route.Method, fmt.Sprintf("%s/%s", collectionName, route.Path), func(c *gin.Context) {
+						c.JSON(route.StatusCode, route.Body)
+					})
+				}(router, collection.Name, route)
+			}
+		}
+		go router.Run(":8085")
+	}
+}
+
 func main() {
+	setupMockServer()
+
 	adminRouter := gin.Default()
 	adminRouter.Use(corsHandler)
 	adminRouter.GET("/collections", func(c *gin.Context) {
-		collections := service.GetCollections()
+		collections := service.GetCollectionNames()
 		c.JSON(200, collections)
 	})
 	adminRouter.POST("/collections", func(c *gin.Context) {
@@ -90,28 +112,6 @@ func main() {
 		return
 	})
 	adminRouter.Run(":8081")
-
-	//router := gin.Default()
-	//router.Use(corsHandler)
-	//
-	//dir, _ := os.Getwd()
-	//files, _ := os.ReadDir(dir + "/collections")
-	//// TODO: Only supporting files in the directory not working on sub directories
-	//for _, file := range files {
-	//	var routes []Route
-	//	serverBytes, _ := os.ReadFile(dir + "/collections/" + file.Name())
-	//	json.Unmarshal(serverBytes, &routes)
-	//
-	//	for _, route := range routes {
-	//		go func(router *gin.Engine, route Route) {
-	//			router.Handle(route.Method, route.Path, func(c *gin.Context) {
-	//				c.JSON(http.StatusOK, route.Body)
-	//			})
-	//		}(router, route)
-	//	}
-	//}
-	//
-	//router.Run(":8085")
 }
 
 type APIErrorResponse struct {
