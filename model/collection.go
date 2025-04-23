@@ -6,8 +6,9 @@ type Collection struct {
 }
 
 type Route struct {
-	Path       string `json:"path"`
-	Method     string `json:"method"`
-	StatusCode int    `json:"statusCode"`
-	Body       any    `json:"body"`
+	Method     string            `json:"method"`
+	Path       string            `json:"path"`
+	Headers    map[string]string `json:"headers"`
+	StatusCode int               `json:"statusCode"`
+	Body       any               `json:"body"`
 }

@@ -32,6 +32,9 @@ func setupMockServer(repo service.CollectionRepo) *http.Server {
 			for _, route := range collection.Routes {
 				go func(router *gin.Engine, collectionName string, route model.Route) {
 					router.Handle(route.Method, fmt.Sprintf("%s/%s", collectionName, route.Path), func(c *gin.Context) {
+						for key, value := range route.Headers {
+							c.Header(key, value)
+						}
 						c.JSON(route.StatusCode, route.Body)
 					})
 				}(router, collection.Name, route)
@@ -62,7 +65,6 @@ func main() {
 	adminRouter.Handle(collectionHandler.DeleteCollection())
 	adminRouter.Handle(collectionHandler.GetCollection())
 	adminRouter.Handle(collectionHandler.UpdateCollection())
-
 	adminRouter.POST("/server/restart", func(c *gin.Context) {
 		ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
 		defer cancel()
