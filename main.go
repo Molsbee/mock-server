@@ -21,37 +21,6 @@ var corsHandler = cors.New(cors.Config{
 	AllowCredentials: true,
 })
 
-func setupMockServer(repo service.CollectionRepo) *http.Server {
-	router := gin.Default()
-	router.Use(corsHandler)
-
-	collections := repo.GetCollections()
-	if len(collections) != 0 {
-		// Setup handlers for Mock Server
-		for _, collection := range collections {
-			for _, route := range collection.Routes {
-				go func(router *gin.Engine, collectionName string, route model.Route) {
-					router.Handle(route.Method, fmt.Sprintf("%s/%s", collectionName, route.Path), func(c *gin.Context) {
-						for key, value := range route.Headers {
-							c.Header(key, value)
-						}
-						c.JSON(route.StatusCode, route.Body)
-					})
-				}(router, collection.Name, route)
-			}
-		}
-	}
-
-	// Using server to support shutting it down programatically
-	srv := &http.Server{
-		Addr:    ":8085",
-		Handler: router,
-	}
-	go srv.ListenAndServe()
-
-	return srv
-}
-
 func main() {
 	repo := service.NewFileCollectionRepo()
 	mockServer := setupMockServer(repo)
@@ -75,4 +44,44 @@ func main() {
 		}
 	})
 	adminRouter.Run(":8081")
+}
+
+func setupMockServer(repo service.CollectionRepo) *http.Server {
+	router := gin.Default()
+	router.Use(corsHandler)
+
+	collections := repo.GetCollections()
+	if len(collections) != 0 {
+		// Setup handlers for Mock Server
+		for _, collection := range collections {
+			for _, route := range collection.Routes {
+				go registerHandler(router, collection.Name, route)
+			}
+
+			for _, group := range collection.Groups {
+				for _, route := range group.Routes {
+					go registerHandler(router, collection.Name, route)
+				}
+			}
+		}
+	}
+
+	// Using server to support shutting it down programatically
+	srv := &http.Server{
+		Addr:    ":8085",
+		Handler: router,
+	}
+	go srv.ListenAndServe()
+
+	return srv
+}
+
+func registerHandler(router *gin.Engine, collectionName string, route model.Route) {
+	router.Handle(route.Method, fmt.Sprintf("%s/%s", collectionName, route.Path), func(c *gin.Context) {
+		for key, value := range route.Headers {
+			c.Header(key, value)
+		}
+
+		c.JSON(route.GetStatusCode(), route.Body)
+	})
 }
